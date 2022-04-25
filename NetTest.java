@@ -4,11 +4,14 @@ import java.net.*;
 import java.io.InputStream;
 import java.util.stream.Collectors;
 
+class Nutrition {
+    private float saturatedFat, transFat, totalFat, cholesterol, sodium, totalCarb, fiber, sugar, protein, energy;
+}
 public class NetTest {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         HttpURLConnection con = null;
         try {
-            URL url = new URL("https://world.openfoodfacts.org/api/v0/product/016000264793.json");
+            URL url = new URL("https://world.openfoodfacts.org/api/v0/product/826998040572.json");
             con = (HttpURLConnection) url.openConnection();
             con.setRequestMethod("GET");
 
