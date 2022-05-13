@@ -66,11 +66,11 @@ public class Table<E> {
 
         StringBuilder tableString = new StringBuilder();
 
-        tableString.append(rowFormatString.formatted(trimOrPad(getColumnNames(), columnWidths, ' ')));
+        tableString.append(String.format(rowFormatString, trimOrPad(getColumnNames(), columnWidths, ' ')));
         tableString.append(trimOrPad("", tableWidth, '='))
                 .append('\n');
         for(int row = 0; row < objects.length; ++row) {
-            tableString.append(rowFormatString.formatted(trimOrPad(rowData[row], columnWidths, ' ')));
+            tableString.append(String.format(rowFormatString, trimOrPad(rowData[row], columnWidths, ' ')));
         }
 
         return tableString.toString();
